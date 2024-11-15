@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Aditya/HomePage.dart';
 import 'CustomHorizontalCalendar.dart';
 import 'CustomHorizontalCalendarMonth.dart';
 import 'DateTimelineDemo.dart';
@@ -16,7 +17,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CustomHorizontalCalendarMonth(),
+      //home: CustomHorizontalCalendarMonth(),
+      home: MyHomePage(title: 'Easy Date Timeline 😊',),
+      //home: DateTimeLineDemo(),
     );
 
   }
