@@ -2,6 +2,7 @@ import 'package:demoprojectcalender/Aditya/Graph/pie_chart.dart';
 import 'package:flutter/material.dart';
 
 import 'Doughnut_chart.dart';
+import 'Line_Chart.dart';
 import 'RadialBar_chart.dart';
 
 class ChartHomescreen extends StatefulWidget {
@@ -71,6 +72,23 @@ class _ChartHomescreenState extends State<ChartHomescreen> {
                 );
               },
               child: const Text("Doughnut Chart",style: TextStyle(color: Colors.white)),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.brown,
+                fixedSize: const Size(200, 50),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ChartScreen()),
+                );
+              },
+              child: const Text("Line Chart",style: TextStyle(color: Colors.white)),
             ),
           ],
         ),
