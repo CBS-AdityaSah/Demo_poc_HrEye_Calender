@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
 
+import 'Aditya/FL_chart/Bar_chart/Bar Chart with Animations.dart';
+import 'Aditya/FL_chart/Bar_chart/Grouped Bar chart.dart';
+import 'Aditya/FL_chart/Bar_chart/Horizontal bar chart.dart';
+import 'Aditya/FL_chart/Bar_chart/Simple Bar chart.dart';
+import 'Aditya/FL_chart/Bar_chart/Stacked bar chart.dart';
+import 'Aditya/FL_chart/Fl_chart_homeScreen.dart';
+import 'Aditya/FL_chart/Radar chart.dart';
+import 'Aditya/FL_chart/pie_chart/Fl_pie chart.dart';
 import 'Aditya/Graph/Chart_homeScreen.dart';
 
 
@@ -15,7 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ChartHomescreen(),
+      home: RadarChartExample(),
       //home: MyHomePage(title: 'Easy Date Timeline 😊',),
       //home: DateTimeLineDemo(),
     );
