@@ -152,18 +152,53 @@ class _LineChartExample1State extends State<LineChartExample1> {
             //lineTouchData: LineTouchData(enabled: false)
             betweenBarsData:[
               BetweenBarsData(fromIndex: 0, toIndex: 1,
-              color: Colors.black87)
+              //color: Colors.black87
+              )
             ],
+            gridData:  FlGridData(
+              show: true, // show grid line true or false
+              drawHorizontalLine: true,
+              drawVerticalLine: false
+            ),
+            borderData: FlBorderData(
+              show: true, // border line true or false
+              border: Border.all(color: Colors.red,width: 2),
+              // border: Border(
+              //   top: BorderSide(
+              //     color: Colors.red,
+              //     width: 3
+              //   )
+              // )
+
+            ),
+            minY: -2 ,
+            maxY: 10,
+            lineTouchData: LineTouchData(
+                touchCallback:(event,result){
+                  print('Event :$event,Result:$result');
+                },
+              handleBuiltInTouches: true, //hover true & false
+                ),
+
             // set titles at all sides
             titlesData: FlTitlesData(
               show: true,
-              rightTitles: AxisTitles(
+              rightTitles: const AxisTitles(
                 axisNameWidget: Text("Right"),
                 axisNameSize: 30
               ),
               leftTitles: AxisTitles(
-                  axisNameWidget: Text("Left"),
-                  axisNameSize: 30
+                  axisNameWidget: const Icon(Icons.ac_unit),
+                  axisNameSize: 30,
+                sideTitles: SideTitles(
+                  showTitles: true,
+                  getTitlesWidget: (double value,TitleMeta meta){
+                    return Padding(
+                      padding: const EdgeInsets.only(right: 8.0),
+                      child: Text(meta.formattedValue,style: TextStyle(color: Colors.red),),
+                    );
+                  }
+                )
               ),
 
 
