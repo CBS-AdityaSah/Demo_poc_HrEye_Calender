@@ -6,8 +6,10 @@ import 'Aditya/FL_chart/Bar_chart/Horizontal bar chart.dart';
 import 'Aditya/FL_chart/Bar_chart/Simple Bar chart.dart';
 import 'Aditya/FL_chart/Bar_chart/Stacked bar chart.dart';
 import 'Aditya/FL_chart/Fl_chart_homeScreen.dart';
+import 'Aditya/FL_chart/Line_chart/FL_line chart 1.dart';
 import 'Aditya/FL_chart/Radar chart.dart';
 import 'Aditya/FL_chart/pie_chart/Fl_pie chart.dart';
+import 'Aditya/FL_chart/pie_chart/simple_pie chart.dart';
 import 'Aditya/Graph/Chart_homeScreen.dart';
 
 
@@ -23,7 +25,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: RadarChartExample(),
+      //home: FlChartHomescreen(),
+      home: LineChartExample1(),
       //home: MyHomePage(title: 'Easy Date Timeline 😊',),
       //home: DateTimeLineDemo(),
     );

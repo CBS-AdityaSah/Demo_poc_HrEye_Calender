@@ -1,8 +1,10 @@
 
+import 'package:demoprojectcalender/Aditya/FL_chart/pie_chart/Fl_pie%20chart.dart';
 import 'package:flutter/material.dart';
 
 import 'Fl_bar_chart.dart';
 import 'Line_chart.dart';
+import 'Radar chart.dart';
 
 class FlChartHomescreen extends StatefulWidget {
   const FlChartHomescreen({super.key});
@@ -67,10 +69,10 @@ class _FlChartHomescreenState extends State<FlChartHomescreen> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LineChartExample()),
+                  MaterialPageRoute(builder: (context) => LineChartSample1()),
                 );
               },
-              child: const Text("Doughnut Chart",style: TextStyle(color: Colors.white)),
+              child: const Text("Radar Chart",style: TextStyle(color: Colors.white)),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
@@ -84,10 +86,10 @@ class _FlChartHomescreenState extends State<FlChartHomescreen> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LineChartExample()),
+                  MaterialPageRoute(builder: (context) => PieChartExample()),
                 );
               },
-              child: const Text("Line Chart",style: TextStyle(color: Colors.white)),
+              child: const Text("Pie Chart",style: TextStyle(color: Colors.white)),
             ),
           ],
         ),
