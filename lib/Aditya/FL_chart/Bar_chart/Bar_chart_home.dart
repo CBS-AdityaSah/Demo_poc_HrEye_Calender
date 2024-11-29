@@ -1,24 +1,17 @@
-
-import 'package:demoprojectcalender/Aditya/FL_chart/pie_chart/Fl_pie%20chart.dart';
-import 'package:demoprojectcalender/Aditya/FL_chart/pie_chart/Pie_chart_home.dart';
-import 'package:demoprojectcalender/Aditya/FL_chart/pie_chart/simple_pie%20chart.dart';
 import 'package:flutter/material.dart';
+import 'Bar Chart with Animations.dart';
+import 'Grouped Bar chart.dart';
+import 'Simple Bar chart.dart';
+import 'Stacked bar chart.dart';
 
-import 'Area chart.dart';
-import 'Bar_chart/Bar_chart_home.dart';
-import 'Fl_bar_chart.dart';
-import 'Line_chart.dart';
-import 'Line_chart/FL_line chart 1.dart';
-import 'Radar chart.dart';
-
-class FlChartHomescreen extends StatefulWidget {
-  const FlChartHomescreen({super.key});
+class FlBarChartHomescreen extends StatefulWidget {
+  const FlBarChartHomescreen({super.key});
 
   @override
-  State<FlChartHomescreen> createState() => _FlChartHomescreenState();
+  State<FlBarChartHomescreen> createState() => _FlBarChartHomescreenState();
 }
 
-class _FlChartHomescreenState extends State<FlChartHomescreen> {
+class _FlBarChartHomescreenState extends State<FlBarChartHomescreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,10 +33,10 @@ class _FlChartHomescreenState extends State<FlChartHomescreen> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => FlBarChartHomescreen()),
+                  MaterialPageRoute(builder: (context) => SimpleBarChart()),
                 );
               },
-              child: const Text("Fl_bar Chart",style: TextStyle(color: Colors.white),),
+              child: const Text("Simple Bar Chart",style: TextStyle(color: Colors.white),),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
@@ -57,10 +50,10 @@ class _FlChartHomescreenState extends State<FlChartHomescreen> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LineChartExample1()),
+                  MaterialPageRoute(builder: (context) => GroupedBarChart()),
                 );
               },
-              child: const Text("Fl_line Chart",style: TextStyle(color: Colors.white)),
+              child: const Text("Grouped Bar Chart",style: TextStyle(color: Colors.white)),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
@@ -74,10 +67,10 @@ class _FlChartHomescreenState extends State<FlChartHomescreen> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => AreaChartExample()),
+                  MaterialPageRoute(builder: (context) => StackedBarChart()),
                 );
               },
-              child: const Text("Area Chart",style: TextStyle(color: Colors.white)),
+              child: const Text("Stacked Bar Chart",style: TextStyle(color: Colors.white)),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
@@ -91,10 +84,10 @@ class _FlChartHomescreenState extends State<FlChartHomescreen> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => FlPieChartHomescreen()),
+                  MaterialPageRoute(builder: (context) => AnimatedBarChart()),
                 );
               },
-              child: const Text("Pie Chart",style: TextStyle(color: Colors.white)),
+              child: const Text("Animated Bar Chart",style: TextStyle(color: Colors.white)),
             ),
           ],
         ),

@@ -25,8 +25,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      //home: FlChartHomescreen(),
-      home: LineChartExample1(),
+      home: FlChartHomescreen(),
+      //home: LineChartExample1(),
       //home: MyHomePage(title: 'Easy Date Timeline 😊',),
       //home: DateTimeLineDemo(),
     );

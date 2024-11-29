@@ -1,24 +1,20 @@
 
 import 'package:demoprojectcalender/Aditya/FL_chart/pie_chart/Fl_pie%20chart.dart';
-import 'package:demoprojectcalender/Aditya/FL_chart/pie_chart/Pie_chart_home.dart';
 import 'package:demoprojectcalender/Aditya/FL_chart/pie_chart/simple_pie%20chart.dart';
 import 'package:flutter/material.dart';
 
-import 'Area chart.dart';
-import 'Bar_chart/Bar_chart_home.dart';
-import 'Fl_bar_chart.dart';
-import 'Line_chart.dart';
-import 'Line_chart/FL_line chart 1.dart';
-import 'Radar chart.dart';
+import '../../Graph/Chart_homeScreen.dart';
+import '../../Graph/pie_chart.dart';
 
-class FlChartHomescreen extends StatefulWidget {
-  const FlChartHomescreen({super.key});
+
+class FlPieChartHomescreen extends StatefulWidget {
+  const FlPieChartHomescreen({super.key});
 
   @override
-  State<FlChartHomescreen> createState() => _FlChartHomescreenState();
+  State<FlPieChartHomescreen> createState() => _FlPieChartHomescreenState();
 }
 
-class _FlChartHomescreenState extends State<FlChartHomescreen> {
+class _FlPieChartHomescreenState extends State<FlPieChartHomescreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,10 +36,10 @@ class _FlChartHomescreenState extends State<FlChartHomescreen> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => FlBarChartHomescreen()),
+                  MaterialPageRoute(builder: (context) => SimplePieChart()),
                 );
               },
-              child: const Text("Fl_bar Chart",style: TextStyle(color: Colors.white),),
+              child: const Text("Pie Chart",style: TextStyle(color: Colors.white),),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
@@ -57,10 +53,10 @@ class _FlChartHomescreenState extends State<FlChartHomescreen> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LineChartExample1()),
+                  MaterialPageRoute(builder: (context) => PieChartExample()),
                 );
               },
-              child: const Text("Fl_line Chart",style: TextStyle(color: Colors.white)),
+              child: const Text("Pie Chart 2",style: TextStyle(color: Colors.white)),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
@@ -74,28 +70,28 @@ class _FlChartHomescreenState extends State<FlChartHomescreen> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => AreaChartExample()),
+                  MaterialPageRoute(builder: (context) => ChartHomescreen()),
                 );
               },
-              child: const Text("Area Chart",style: TextStyle(color: Colors.white)),
+              child: const Text(" Syncfusion Chart",style: TextStyle(color: Colors.white)),
             ),
             const SizedBox(height: 20),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.brown,
-                fixedSize: const Size(200, 50),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => FlPieChartHomescreen()),
-                );
-              },
-              child: const Text("Pie Chart",style: TextStyle(color: Colors.white)),
-            ),
+            // ElevatedButton(
+            //   style: ElevatedButton.styleFrom(
+            //     backgroundColor: Colors.brown,
+            //     fixedSize: const Size(200, 50),
+            //     shape: RoundedRectangleBorder(
+            //       borderRadius: BorderRadius.circular(8),
+            //     ),
+            //   ),
+            //   onPressed: () {
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(builder: (context) => SimplePieChart()),
+            //     );
+            //   },
+            //   child: const Text("Pie Chart",style: TextStyle(color: Colors.white)),
+            // ),
           ],
         ),
       ),
