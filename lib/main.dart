@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'Aditya/Action_toggle/Action_slider.dart';
+import 'Aditya/Action_toggle/Animated_toggle_switch.dart';
+import 'Aditya/Action_toggle/lite_rolling.dart';
 import 'Aditya/FL_chart/Bar_chart/Bar Chart with Animations.dart';
 import 'Aditya/FL_chart/Bar_chart/Grouped Bar chart.dart';
 import 'Aditya/FL_chart/Bar_chart/Horizontal bar chart.dart';
@@ -23,12 +26,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FlChartHomescreen(),
+      //home: FlChartHomescreen(),
       //home: LineChartExample1(),
       //home: MyHomePage(title: 'Easy Date Timeline 😊',),
       //home: DateTimeLineDemo(),
+      //home: LiteRolling(),
+      home: MyHomePageAction(title: 'Confirmation Slider Example'),
     );
 
   }
