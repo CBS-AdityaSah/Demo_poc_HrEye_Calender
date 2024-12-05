@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'Aditya/Action_toggle/Action_slider.dart';
 import 'Aditya/Action_toggle/Animated_toggle_switch.dart';
 import 'Aditya/Action_toggle/lite_rolling.dart';
+import 'Aditya/BottomSheet/BottomNavigation.dart';
 import 'Aditya/FL_chart/Bar_chart/Bar Chart with Animations.dart';
 import 'Aditya/FL_chart/Bar_chart/Grouped Bar chart.dart';
 import 'Aditya/FL_chart/Bar_chart/Horizontal bar chart.dart';
@@ -32,8 +33,8 @@ class MyApp extends StatelessWidget {
       //home: LineChartExample1(),
       //home: MyHomePage(title: 'Easy Date Timeline 😊',),
       //home: DateTimeLineDemo(),
-      //home: LiteRolling(),
-      home: MyHomePageAction(title: 'Confirmation Slider Example'),
+      home: BottomNavigation(),
+      //home: MyHomePageAction(title: 'Confirmation Slider Example'),
     );
 
   }
